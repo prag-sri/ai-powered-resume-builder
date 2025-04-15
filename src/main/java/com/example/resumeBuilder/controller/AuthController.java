@@ -43,7 +43,7 @@ public class AuthController {
 
         if(passwordEncoder.matches(authRequest.getPassword(), user.getPassword())) {
             String token = jwtUtil.generateToken(user.getEmail());
-            return ResponseEntity.ok(token);
+            return ResponseEntity.ok("Generated Token: " + token);
         } else {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid credentials");
         }

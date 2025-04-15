@@ -20,7 +20,7 @@ public class Resume {
     @JoinColumn(name = "user_id")
     private User user;
 
-    private String summary;
+    private String summary;  // not given by client but generated using generateSummary()
     private String skills;
     private String experience;
 }

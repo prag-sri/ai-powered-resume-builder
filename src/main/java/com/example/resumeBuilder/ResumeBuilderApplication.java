@@ -12,6 +12,7 @@ public class ResumeBuilderApplication {
 		// Load .env file
 		Dotenv dotenv = Dotenv.load();
 		System.setProperty("JWT_SECRET", dotenv.get("JWT_SECRET"));
+		System.setProperty("OPENAI_API_KEY", dotenv.get("OPENAI_API_KEY"));
 		SpringApplication.run(ResumeBuilderApplication.class, args);
 	}
 }
